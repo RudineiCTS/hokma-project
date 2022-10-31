@@ -1,5 +1,5 @@
-import {Container, Icon} from './styles'
-import {FaTimes} from 'react-icons/fa'
+import ItemSideBar from '../ItemSideBar';
+import {Container, Icon, ContainerItem} from './styles'
 interface SideBarProps {
   isActiveSidebar:boolean;
   closeSideBar: ()=>void;
@@ -12,6 +12,12 @@ export function SideBar({isActiveSidebar, closeSideBar}: SideBarProps) {
       <button onClick={closeSideBar}>
         <Icon color='#ED3E3E'/>
       </button>
+      <ContainerItem>
+        <ItemSideBar title='Professores'/>
+        <ItemSideBar title='Alunos'/>
+        <ItemSideBar title='Espaço'/>
+        <ItemSideBar title='Como participar ?'/>
+      </ContainerItem>
     </Container>
   )
 }

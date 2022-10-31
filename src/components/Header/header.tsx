@@ -1,4 +1,5 @@
 import hokmaImg from '../../assets/logo-hokma.png';
+import MenuHamburguer from '../MenuHamburguer';
 
 import {
   Title, 
@@ -9,12 +10,20 @@ import {
   Content,
 } from './style';
 
-function Header() {
+interface HeaderProps {
+  isOpenHamburguer:boolean;
+  openHamburguerMenu: () => void;
+}
+
+function Header({isOpenHamburguer,openHamburguerMenu }: HeaderProps) {
   return (
     <>
   
     <Container>
-
+      <MenuHamburguer 
+        isOpenHamburguer={isOpenHamburguer} 
+        openHamburguerMenu={openHamburguerMenu} />
+        
       <Content>
           <Image src={hokmaImg} alt="Escola Hokma" />
           <ContentTitle>

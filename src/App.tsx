@@ -12,13 +12,8 @@ function App() {
 
   return (
     <>
-      <MenuHamburguer  
-        isOpenHamburguer={isOpenHamburguer}
-        openHamburguerMenu={HandleSetIsOpenHamburguer}
-        
-      
-      />
-      <Header/>
+      <Header isOpenHamburguer={isOpenHamburguer}
+        openHamburguerMenu={HandleSetIsOpenHamburguer} />
     </>
   )
 }

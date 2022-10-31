@@ -20,7 +20,7 @@ export const Container = styled.div<PropContainer>`
 position:fixed;
 right:0;
 top:0px ;
-width: 25%;
+width: 300px;
 height:100%;
 background:#101010 ;
 box-shadow: 2px;
@@ -37,14 +37,6 @@ animation: ${showSidebar} .4s;
 display:${props => props.isActiveSidebar ? 'flex' : 'none'};
 `
 
-const ButtonAniation = keyframes`
-from{
-  font-size:30px;
-}
-to{
-  font-size:35px;
-}
-`
 
 
 export const Icon = styled(FaTimes)`
@@ -52,5 +44,10 @@ export const Icon = styled(FaTimes)`
     right:10px;
     top:15px;
     font-size:30px;
-    animation: ${ButtonAniation} 4s;
 ` 
+
+export const ContainerItem = styled.div`
+display:flex;
+flex-direction:column;
+margin-top:100px;
+`
