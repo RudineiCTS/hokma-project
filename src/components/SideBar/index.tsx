@@ -1,5 +1,5 @@
 import ItemSideBar from '../ItemSideBar';
-import {Container, Icon, ContainerItem} from './styles'
+import {Container, Icon, ContainerItem, CloseButton} from './styles'
 interface SideBarProps {
   isActiveSidebar:boolean;
   closeSideBar: ()=>void;
@@ -9,9 +9,9 @@ interface SideBarProps {
 export function SideBar({isActiveSidebar, closeSideBar}: SideBarProps) {
   return (
     <Container isActiveSidebar={isActiveSidebar}>
-      <button onClick={closeSideBar}>
+      <CloseButton onClick={closeSideBar}>
         <Icon color='#ED3E3E'/>
-      </button>
+      </CloseButton>
       <ContainerItem>
         <ItemSideBar title='Professores'/>
         <ItemSideBar title='Alunos'/>

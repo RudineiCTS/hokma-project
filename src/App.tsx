@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import '../styles/global.css';
 import Header from './components/Header/header';
-import MenuHamburguer from './components/MenuHamburguer';
+import Main from './components/Main';
 
 function App() {
   const [isOpenHamburguer,setIsOpenHamburguer] = useState(false);
@@ -14,6 +14,7 @@ function App() {
     <>
       <Header isOpenHamburguer={isOpenHamburguer}
         openHamburguerMenu={HandleSetIsOpenHamburguer} />
+        <Main/>
     </>
   )
 }

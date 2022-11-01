@@ -1,4 +1,4 @@
-import {Container} from './styles';
+import {Container, ItemBar} from './styles';
 
 interface ItemSideBarProps{
   title:string;
@@ -7,7 +7,7 @@ interface ItemSideBarProps{
 export default function ItemSideBar({title}: ItemSideBarProps) {
   return (
     <Container>
-      <section> {title} </section>
+        <ItemBar> {title} </ItemBar>
     </Container>
   )
 }

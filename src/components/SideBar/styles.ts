@@ -26,16 +26,14 @@ background:#101010 ;
 box-shadow: 2px;
 animation: ${showSidebar} .4s;
 
-  button{
-    display:flex;
-    position:fixed;
-    right:10px;
-    top:15px;
-  }
-
 
 display:${props => props.isActiveSidebar ? 'flex' : 'none'};
 `
+export const CloseButton = styled.button`
+display:flex;
+position:fixed;
+right:10px;
+top:15px;`
 
 
 
@@ -47,7 +45,5 @@ export const Icon = styled(FaTimes)`
 ` 
 
 export const ContainerItem = styled.div`
-display:flex;
-flex-direction:column;
 margin-top:100px;
 `
