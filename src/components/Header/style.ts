@@ -44,12 +44,16 @@ padding-bottom:70px;
 margin-right:56px;
   section{
     padding: 0 40px;
-    a{
+    button{
       font-family: 'Akshar', sans-serif;
       font-size: 1.25rem;
       font-weight:400;
+      border:none;
+      background:none;
+      color:#fff;
     }
   }
+
 
   @media(max-width:1080px ){
   display: none;

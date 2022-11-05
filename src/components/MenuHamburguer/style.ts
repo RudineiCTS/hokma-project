@@ -9,6 +9,8 @@ right:10px;
     border: 0;
     background: none;
   }
-  
+  @media(min-width:1080px ){
+  display: none;
+  }
 `
 

@@ -1,3 +1,5 @@
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import hokmaImg from '../../assets/logo-hokma.png';
 import MenuHamburguer from '../MenuHamburguer';
 
@@ -10,19 +12,17 @@ import {
   Content,
 } from './style';
 
-interface HeaderProps {
-  isOpenHamburguer:boolean;
-  openHamburguerMenu: () => void;
-}
 
-function Header({isOpenHamburguer,openHamburguerMenu }: HeaderProps) {
+function Header() {
+  const [isOpenHamburguer,setIsOpenHamburguer] = useState(false);
+  const navigation = useNavigate();
   return (
     <>
   
     <Container>
       <MenuHamburguer 
         isOpenHamburguer={isOpenHamburguer} 
-        openHamburguerMenu={openHamburguerMenu} />
+        openHamburguerMenu={()=>{setIsOpenHamburguer(!isOpenHamburguer)}} />
         
       <Content>
           <Image src={hokmaImg} alt="Escola Hokma" />
@@ -38,24 +38,24 @@ function Header({isOpenHamburguer,openHamburguerMenu }: HeaderProps) {
 
         <ContainerCategory>
           <section>
-            <a href="">
+            <button onClick={()=>{ navigation('/teachers') }}>
               Professores
-            </a>
+            </button>
           </section>
           <section>
-            <a href="">
+            <button>
               Alunos
-            </a>
+            </button>
           </section>
           <section>
-            <a href="">
+            <button>
               Espaço  
-            </a>
+            </button>
           </section>
           <section>
-            <a href="">
+            <button>
               Como participar?
-            </a>
+            </button>
           </section>
         </ContainerCategory>
 

@@ -11,16 +11,25 @@ width:100vw;
     font-weight:bold;
 
   }
-  p{
-    line-break:strict;
-    font-size:1rem;
-    margin-top:20px;
-    
+  main{
+
+    margin: 20px 30px 0 30px;
+
+    p{
+      line-break:strict;
+      font-size:1.2rem;
+      margin-top:20px;
+      padding:0 20px;
+      text-align:center;
+
+    }
   }
+
 `;
 
 export const Divider= styled.div`
 height: 7px;
 margin: 0 50px 0 50px;
-background-color: var(--white);
+background-image: linear-gradient(to right, yellow , red);
 `;
+
