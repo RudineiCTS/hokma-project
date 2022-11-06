@@ -22,11 +22,15 @@
 @media(max-width:720px){
   html{
     font-size: 87.5%;
+
   }
 }
 
 body  {
-  background: var(--fundo-dark);
+  background: url('../src/assets/background.png');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-color: var(--fundo-dark);
   color: var(--white);
 }
 
