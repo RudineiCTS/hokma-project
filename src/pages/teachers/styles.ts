@@ -13,7 +13,8 @@ export const ContainerCardItem = styled.div`
 display: flex;
 margin-left:100px;
 margin-right:100px;
-margin-top:75px ;
+margin-top:75px;
+flex-wrap:wrap ;
 
 justify-content:space-evenly;
 
